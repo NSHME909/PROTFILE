@@ -20,7 +20,20 @@ export default function About() {
                             {profile.links.map((l) => <a key={l.label} href={l.url} target="_blank" rel="noreferrer">{l.label} ↗</a>)}
                         </div>
                     </div>
-                    <pre className="code">{code}</pre>
+                    <div className="editor">
+                        <div className="editor-bar">
+                            <span className="lights"><i /><i /><i /></span>
+                            <span className="file">engineer.js</span>
+                        </div>
+                        <div className="editor-body">
+                            {code.split('\n').map((ln, i) => (
+                                <div key={i} className="ln">
+                                    <span className="no">{i + 1}</span>
+                                    <span className="tx">{ln}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -333,16 +333,72 @@ main {
         padding-bottom: 2px;
     }
 
-.code {
+.editor {
     background: rgba(38, 38, 44, .85);
     border: 1px solid var(--line);
     border-radius: 20px;
-    padding: 28px;
-    font: inherit;
+    overflow: hidden;
+}
+
+.editor-bar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 18px;
+    background: rgba(20, 20, 23, .6);
+    border-bottom: 1px solid var(--line);
+}
+
+.lights {
+    display: flex;
+    gap: 8px;
+}
+
+    .lights i {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--line);
+    }
+
+        .lights i:first-child {
+            background: var(--accent);
+        }
+
+.file {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sand);
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: var(--panel);
+    box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.editor-body {
+    padding: 20px 0;
     font-size: 16px;
     line-height: 1.8;
-    white-space: pre;
     overflow-x: auto;
+}
+
+.ln {
+    display: flex;
+    white-space: pre;
+    min-width: max-content;
+}
+
+.no {
+    flex-shrink: 0;
+    width: 52px;
+    padding-right: 20px;
+    text-align: right;
+    color: var(--mute);
+    user-select: none;
+}
+
+.tx {
+    padding-right: 24px;
 }
 
 .grid {
@@ -623,9 +679,14 @@ main {
         margin-left: 32px;
     }
 
-    .code {
+    .editor-body {
         font-size: 13px;
-        padding: 20px;
+        padding: 14px 0;
+    }
+
+    .no {
+        width: 40px;
+        padding-right: 14px;
     }
 
     .card {
