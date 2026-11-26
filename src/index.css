@@ -22,10 +22,18 @@ body {
     color: var(--sand);
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg);
-    background-image: radial-gradient(900px 600px at 85% 8%, rgba(163, 50, 77, .20), transparent 60%), radial-gradient(700px 500px at 5% 92%, rgba(232, 220, 196, .05), transparent 60%), linear-gradient(rgba(232, 220, 196, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 220, 196, .035) 1px, transparent 1px);
-    background-size: auto, auto, 48px 48px, 48px 48px;
-    background-attachment: fixed;
+    overflow-x: clip;
 }
+
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: radial-gradient(900px 600px at 85% 8%, rgba(163, 50, 77, .20), transparent 60%), radial-gradient(700px 500px at 5% 92%, rgba(232, 220, 196, .05), transparent 60%), linear-gradient(rgba(232, 220, 196, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 220, 196, .035) 1px, transparent 1px);
+        background-size: auto, auto, 48px 48px, 48px 48px;
+    }
 
 ::selection {
     background: var(--accent);
@@ -339,7 +347,7 @@ main {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 24px;
 }
 
@@ -538,15 +546,109 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .nav nav {
-        gap: 14px;
-        font-size: 13px;
+    .section {
+        padding: 120px 6vw 64px;
+    }
+
+    .title {
+        margin-bottom: 32px;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
+@media (max-width: 640px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 5vw;
+    }
+
+    .logo {
+        height: 26px;
+    }
+
+    .brand {
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .nav nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+        .nav nav a {
+            font-size: 13px;
+        }
+
+    .section {
+        padding-top: 130px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .hero-title {
+        font-size: clamp(28px, 8vw, 44px);
+    }
+
+    .hello {
+        font-size: 16px;
+    }
+
+    .role {
+        font-size: 18px;
+    }
+
+    .lead {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .scroll-hint {
+        display: none;
+    }
+
+    .track span {
+        font-size: 17px;
+        padding-right: 32px;
+    }
+
+    .track b {
+        margin-left: 32px;
+    }
+
+    .code {
+        font-size: 13px;
+        padding: 20px;
+    }
+
+    .card {
+        min-height: 0;
+        padding: 24px;
+    }
+
+        .card h3 {
+            margin: 28px 0 8px;
+            font-size: 22px;
+        }
+
+    .chips span {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .form input, .form textarea {
+        padding: 14px 18px;
+    }
+
+    .form button {
+        justify-self: stretch;
+        width: 100%;
     }
 }

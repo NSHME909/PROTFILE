@@ -205,7 +205,7 @@ export function IntroPlayer({ onDone }) {
     const audio = useRef(null)
 
     useEffect(() => {
-        const fit = () => setScale(Math.min(innerWidth / 1920, innerHeight / 1080))
+        const fit = () => setScale(Math.min(innerWidth / 1300, innerHeight / 1080))
         fit(); addEventListener('resize', fit)
         return () => removeEventListener('resize', fit)
     }, [])
@@ -234,7 +234,9 @@ export function IntroPlayer({ onDone }) {
 
     return (
         <div className="intro">
-            <Frame t={t} scale={scale} />
+            <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                <Frame t={t} scale={scale} />
+            </div>
             <button className="skip" onClick={() => { audio.current?.stop?.(); onDone?.() }}>Skip</button>
         </div>
     )
