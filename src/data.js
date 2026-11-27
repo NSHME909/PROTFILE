@@ -5,8 +5,8 @@ export const profile = {
     bio: 'Write two or three sentences about yourself: what you build, what you care about (clean code, testing, performance...), and what you are looking for.',
     focus: ['Web apps', 'APIs', 'Clean code'],
     links: [
-        { label: 'GitHub', url: 'https://github.com/' },
-        { label: 'LinkedIn', url: 'https://linkedin.com/' },
+        { label: 'GitHub', url: 'https://github.com/NSHME909' },
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/mohammad-fouad-351418418' },
     ],
 }
 
@@ -17,8 +17,8 @@ export const projects = [
 ]
 
 export const skills = [
-    { group: 'Languages', items: ['JavaScript', 'TypeScript', 'Python', 'Java'] },
+    { group: 'Languages', items: ['JavaScript', 'TypeScript', 'Python', 'Java' , 'C#' ] },
     { group: 'Frontend', items: ['React', 'HTML & CSS', 'Vite'] },
-    { group: 'Backend & Data', items: ['Node.js', 'REST APIs', 'SQL'] },
+    { group: 'Backend & Data', items: ['Node.js', 'ASP.Net' , 'REST APIs', 'SQL'] },
     { group: 'Tooling', items: ['Git & GitHub', 'Testing', 'CI/CD', 'Docker'] },
 ]
