@@ -1,8 +1,8 @@
 export const profile = {
     name: 'Mohammad Fouad',
     role: 'Software Engineer',
-    email: 'you@email.com',
-    bio: 'Write two or three sentences about yourself: what you build, what you care about (clean code, testing, performance...), and what you are looking for.',
+    email: 'mohammadnafe11234@gmail.com',
+    bio: 'I build responsive web applications and scalable backend APIs using React, C#, and ASP.NET. Focused on clean architecture, performance, and reliable user interfaces, I enjoy turning practical ideas into working software. I am currently seeking internship or entry-level opportunities to apply my full-stack skills in a collaborative development environment.',
     focus: ['Web apps', 'APIs', 'Clean code'],
     links: [
         { label: 'GitHub', url: 'https://github.com/NSHME909' },
